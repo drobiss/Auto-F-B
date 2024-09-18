@@ -1,0 +1,229 @@
+.home-container {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 120px auto 10vh;
+  padding: 0 5%;
+  max-width: 1200px;
+}
+
+.hero-text-container {
+  flex: 1;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-text-container h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hero-text-container p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.hero-cta {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 35px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #a00a18;
+  color: white;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.hero-cta:hover {
+  background-color: white;
+  color: #171616;
+  box-shadow: 0 4px 15px rgba(160, 10, 24, 0.3);
+}
+
+.hero-img-container {
+  flex: 1;
+  max-width: 550px;
+  margin-left: 40px;
+}
+
+.hero-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* SERVICES SECTION */
+.services-container {
+  margin: 10vh auto;
+  max-width: 1200px;
+  padding: 0 5%;
+}
+
+.services-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.services-cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.mechanical-work-card,
+.other-services-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mechanical-work-card:hover,
+.other-services-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mechanical-work-card h4,
+.other-services-card h4 {
+  margin: 20px 0 15px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.mechanical-work-card p,
+.other-services-card p {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.mechanical-work-btn,
+.other-services-btn {
+  background-color: #a00a18;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.mechanical-work-btn:hover,
+.other-services-btn:hover {
+  background-color: white;
+  color: #a00a18;
+  box-shadow: 0 4px 15px rgba(160, 10, 24, 0.3);
+}
+
+.mechanical-work-card .fa-gears,
+.other-services-card .fa-toolbox {
+  font-size: 3rem;
+  color: #a00a18;
+  margin-bottom: 15px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .hero-section,
+  .services-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-section {
+    margin-top: 100px;
+  }
+  
+  .hero-text-container,
+  .hero-img-container,
+  .mechanical-work-card,
+  .other-services-card {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .hero-img-container {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .hero-text-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .services-container h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    margin: 5vh auto;
+    margin-top: 80px;
+  }
+
+  .hero-text-container h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text-container p,
+  .mechanical-work-card p,
+  .other-services-card p {
+    font-size: 0.9rem;
+  }
+
+  .services-container {
+    margin: 5vh auto;
+  }
+
+  .mechanical-work-card,
+  .other-services-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-cta,
+  .mechanical-work-btn,
+  .other-services-btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+
+  .services-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .mechanical-work-card h4,
+  .other-services-card h4 {
+    font-size: 1.3rem;
+  }
+}
