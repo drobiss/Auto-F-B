@@ -1,11 +1,12 @@
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../components/Navbar.css";
 import CtaButton from "./CtaButton";
-import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,12 +19,16 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header>
-      <nav className={`navbar ${visible ? '' : 'nav-hidden'}`}>
+      <nav className={`navbar ${visible ? '' : 'nav-hidden'} ${isOpen ? 'nav-open' : ''}`}>
         <h3>Auto F&B</h3>
 
-        <div className="nav-links-container">
+        <div className={`nav-links-container ${isOpen ? 'show' : ''}`}>
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "activeLink" : "nonactiveLink")}
@@ -51,9 +56,15 @@ const Navbar = () => {
           >
             O nás
           </NavLink>
+
+          <CtaButton />
         </div>
 
-        <CtaButton />
+        <div className="hamburger" onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
   );
