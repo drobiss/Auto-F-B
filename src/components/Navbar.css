@@ -77,7 +77,7 @@ nav h3 {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px 20px;
+    padding: 15px 20px;
   }
 
   .nav-links-container {
@@ -92,6 +92,10 @@ nav h3 {
     display: flex;
   }
 
+  nav h3 {
+    font-size: 20px
+  }
+
   .nav-links-container a {
     margin: 10px 0;
   }
@@ -99,7 +103,7 @@ nav h3 {
   .hamburger {
     display: flex;
     position: absolute;
-    top: 25px;
+    top: 18px;
     right: 30px;
   }
 
