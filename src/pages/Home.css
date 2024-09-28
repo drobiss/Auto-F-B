@@ -1,17 +1,28 @@
+
 .home-container {
   color: white;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
 }
 
-/* HERO SECTION */
+/* Main containers styles*/
+.hero-section,
+.services-container,
+.cta-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5%;
+}
+
+/* Hero section*/
 .hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 120px auto 10vh;
-  padding: 0 5%;
-  max-width: 1200px;
+  margin-top: 120px;
+  margin-bottom: 10vh;
+  padding: 0;
 }
 
 .hero-text-container {
@@ -53,24 +64,35 @@
 }
 
 .hero-img-container {
+  border-radius: 10px;
   flex: 1;
   max-width: 550px;
   margin-left: 40px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
-.hero-img-container img {
+.hero-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 2s ease-in-out; 
 }
 
-/* SERVICES SECTION */
+.hero-image.fade-in {
+  opacity: 1;
+}
+
+/* Services section */
 .services-container {
-  margin: 10vh auto;
-  max-width: 1200px;
-  padding: 0 5%;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  padding: 0;
 }
 
 .services-container h2 {
@@ -146,6 +168,34 @@
   margin-bottom: 15px;
 }
 
+/* CTA section */
+.cta-section {
+  background-color: #171616;
+  padding: 80px 0;
+  margin: 60px 0;
+}
+
+.cta-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.cta-container h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.cta-container p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .hero-section,
@@ -175,15 +225,15 @@
     font-size: 2.2rem;
   }
 
-  .services-container h2 {
+  .services-container h2,
+  .cta-container h2 {
     font-size: 1.8rem;
   }
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    margin: 5vh auto;
-    margin-top: 80px;
+    margin: 80px auto 5vh;
   }
 
   .hero-text-container h1 {
@@ -192,11 +242,13 @@
 
   .hero-text-container p,
   .mechanical-work-card p,
-  .other-services-card p {
+  .other-services-card p,
+  .cta-container p {
     font-size: 0.9rem;
   }
 
-  .services-container {
+  .services-container,
+  .cta-section {
     margin: 5vh auto;
   }
 
@@ -204,16 +256,22 @@
   .other-services-card {
     padding: 30px;
   }
+
+  .cta-container h2 {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .hero-text-container h1 {
+  .hero-text-container h1,
+  .cta-container h2 {
     font-size: 1.8rem;
   }
 
   .hero-cta,
   .mechanical-work-btn,
-  .other-services-btn {
+  .other-services-btn,
+  .cta-button {
     padding: 10px 20px;
     font-size: 0.8rem;
   }

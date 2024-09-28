@@ -1,12 +1,29 @@
+import { useState, useEffect } from "react"
 import "../pages/Home.css"
-import dilnaImage from "../images/dilna.jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGears } from '@fortawesome/free-solid-svg-icons'
-import { faToolbox } from '@fortawesome/free-solid-svg-icons'
+import { faGears, faToolbox } from '@fortawesome/free-solid-svg-icons'
+
+//Images import
+import dilnaImage from "../images/dilna.jpg"
+import dilnaVenkuImage from "../images/dilna-venku.jpg"
+import klimaImage from "../images/cisteni-klimatizace.jpg"
 
 const Home = () => {
-  return <div className="home-container">
+  const images = [dilnaImage, dilnaVenkuImage, klimaImage]
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [nextImageIndex, setNextImageIndex] = useState(1)
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+      setNextImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 5000)
+
+    return () => clearInterval(intervalId)
+  }, [images.length])
+
+  return <div className="home-container">
+    
     <section className="hero-section">
       <div className="hero-text-container">
         <h1>Autoservis Horusická,<br/> Praha - Kyje</h1>
@@ -15,7 +32,15 @@ const Home = () => {
       </div>
 
       <div className="hero-img-container">
-          <img src={dilnaImage} alt="Dilna" />
+        {images.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`Dílna ${index + 1}`}
+            className={`hero-image ${index === currentImageIndex ? 'fade-in' : ''}`}
+            style={{ zIndex: index === currentImageIndex ? 1 : 0 }}
+          />
+        ))}
       </div>
     </section>
 
@@ -36,9 +61,17 @@ const Home = () => {
           <p>Nabízíme širokou škálu dalších služeb včetně údržby a oprav autoklimatizací, dezinfekce vozidel ozonem, profesionální diagnostiky pro většinu vozidel a leštění světlometů. Vaše vozidlo u nás dostane prvotřídní péči.</p>
           <button className="other-services-btn">Více o dalších službách &#62;</button>
         </div>
-
       </div>
     </section>
+
+    <section className="cta-section">
+      <div className="cta-container">
+        <h2>Připraveni svěřit své auto do profesionálních rukou?</h2>
+        <p>Kontaktujte nás ještě dnes a domluvte si termín servisu!</p>
+        <button className="hero-cta">Kontakt</button>
+      </div>
+    </section>
+
   </div>
 }
 
