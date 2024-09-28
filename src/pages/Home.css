@@ -198,6 +198,11 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
+
+  .home-container{
+    padding: 0 10px;
+  }
+
   .hero-section,
   .services-cards-container {
     flex-direction: column;
