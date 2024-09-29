@@ -24,6 +24,10 @@ nav h3 {
   font-size: 25px;
 }
 
+.logo-link {
+  text-decoration: none;
+}
+
 .nav-links-container a {
   margin-right: 15px;
   text-decoration: none;

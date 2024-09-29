@@ -1,4 +1,3 @@
-
 .home-container {
   color: white;
   font-family: 'Arial', sans-serif;
@@ -18,19 +17,21 @@
 /* Hero section*/
 .hero-section {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 120px;
-  margin-bottom: 10vh;
-  padding: 0;
+  margin-top: 80px;
+  margin-bottom: 5vh;
+  padding: 0 5%;
 }
 
 .hero-text-container {
   flex: 1;
-  max-width: 550px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 40px;
 }
 
 .hero-text-container h1 {
@@ -65,9 +66,8 @@
 
 .hero-img-container {
   border-radius: 10px;
-  flex: 1;
+  width: 100%;
   max-width: 550px;
-  margin-left: 40px;
   position: relative;
   overflow: hidden;
   aspect-ratio: 16 / 9;
@@ -197,37 +197,38 @@
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    margin-top: 120px;
+    margin-bottom: 10vh;
+  }
 
-  .home-container{
+  .hero-text-container {
+    max-width: 50%;
+    margin-bottom: 0;
+  }
+
+  .hero-img-container {
+    max-width: 45%;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-container {
     padding: 0 10px;
   }
 
-  .hero-section,
   .services-cards-container {
     flex-direction: column;
     align-items: center;
   }
-
-  .hero-section {
-    margin-top: 100px;
-  }
   
-  .hero-text-container,
-  .hero-img-container,
   .mechanical-work-card,
   .other-services-card {
     max-width: 100%;
     margin: 20px 0;
-  }
-
-  .hero-img-container {
-    margin-left: 0;
-    margin-top: 40px;
-  }
-
-  .hero-text-container h1 {
-    font-size: 2.2rem;
   }
 
   .services-container h2,
@@ -268,6 +269,10 @@
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    margin-top: 60px;
+  }
+
   .hero-text-container h1,
   .cta-container h2 {
     font-size: 1.8rem;

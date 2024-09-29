@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../components/Navbar.css";
 import CtaButton from "./CtaButton";
 
@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <header>
       <nav className={`navbar ${visible ? '' : 'nav-hidden'} ${isOpen ? 'nav-open' : ''}`}>
-        <h3>Auto F&B</h3>
+        <Link to="/" className="logo-link"><h3>Auto F&B</h3></Link>
 
         <div className={`nav-links-container ${isOpen ? 'show' : ''}`}>
           <NavLink
