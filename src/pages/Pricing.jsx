@@ -1,5 +1,5 @@
 import React from 'react';
-import CtaButton from '../components/CtaButton';
+import CtaSection from "../components/CtaSection"
 import "./Pricing.css"
 
 const PricingPage = () => {
@@ -55,11 +55,7 @@ const PricingPage = () => {
         </table>
       </section>
 
-      <section className="cta-section">
-        <h2>Připraveni svěřit své auto do profesionálních rukou?</h2>
-        <p>Kontaktujte nás ještě dnes a domluvte si termín servisu!</p>
-        <CtaButton text="Kontakt" />
-      </section>
+      <CtaSection/>
     </div>
   );
 };

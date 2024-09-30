@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import "../pages/Home.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGears, faToolbox } from '@fortawesome/free-solid-svg-icons'
+import CtaSection from "../components/CtaSection"
 
 //Images import
 import dilnaImage from "../images/dilna.jpg"
@@ -12,6 +13,10 @@ const Home = () => {
   const images = [dilnaImage, dilnaVenkuImage, klimaImage]
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [nextImageIndex, setNextImageIndex] = useState(1)
+  const servicesHeadingRef = useRef(null)
+  const lastScrollTop = useRef(0)
+  const scrollDirection = useRef('down')
+  const scrollBuffer = useRef(0)
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -21,6 +26,50 @@ const Home = () => {
 
     return () => clearInterval(intervalId)
   }, [images.length])
+
+  useEffect(() => {
+    let ticking = false
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const st = window.pageYOffset || document.documentElement.scrollTop
+          const servicesHeading = servicesHeadingRef.current
+
+          // Determine scroll direction with a buffer
+          if (st > lastScrollTop.current + 5) {
+            scrollDirection.current = 'down'
+            scrollBuffer.current = 0
+          } else if (st < lastScrollTop.current - 5) {
+            scrollDirection.current = 'up'
+            scrollBuffer.current = 0
+          } else {
+            scrollBuffer.current++
+          }
+
+          if (servicesHeading) {
+            const rect = servicesHeading.getBoundingClientRect()
+            const isInView = rect.top <= window.innerHeight * 0.75 && rect.bottom >= 0
+
+            if (isInView && scrollDirection.current === 'down' && scrollBuffer.current < 10) {
+              servicesHeading.classList.add('visible')
+            } else if (!isInView || (scrollDirection.current === 'up' && scrollBuffer.current >= 10)) {
+              servicesHeading.classList.remove('visible')
+            }
+          }
+
+          lastScrollTop.current = st <= 0 ? 0 : st
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Check visibility on initial render
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return <div className="home-container">
     
@@ -45,7 +94,7 @@ const Home = () => {
     </section>
 
     <section className="services-container">
-      <h2>Naše služby pro váš vůz</h2>
+      <h2 ref={servicesHeadingRef}>Naše služby pro váš vůz</h2>
 
       <div className="services-cards-container">
         <div className="mechanical-work-card">
@@ -64,13 +113,7 @@ const Home = () => {
       </div>
     </section>
 
-    <section className="cta-section">
-      <div className="cta-container">
-        <h2>Připraveni svěřit své auto do profesionálních rukou?</h2>
-        <p>Kontaktujte nás ještě dnes a domluvte si termín servisu!</p>
-        <button className="hero-cta">Kontakt</button>
-      </div>
-    </section>
+    <CtaSection/>
 
   </div>
 }
