@@ -80,21 +80,15 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    height: auto;
-    min-height: 100vh;
+    height: 100vh; /* Ensure full viewport height on mobile */
   }
 
   .hero-background {
-    position: fixed;
-    height: 100vh;
+    position: absolute; /* Change from fixed to absolute */
   }
 
   .hero-image {
-    background-attachment: scroll;
-  }
-
-  .hero-content {
-    padding: 60px 20px;
+    background-attachment: scroll; /* Prevent zoom effect on scroll */
   }
 
   .hero-content h1 {
