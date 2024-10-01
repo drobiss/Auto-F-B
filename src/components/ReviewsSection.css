@@ -70,6 +70,11 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
+
+  .reviews-container {
+    height: 60vh;
+  }
+  
   .reviews-container h2 {
     font-size: 1.8rem;
   }
@@ -80,6 +85,8 @@
 }
 
 @media (max-width: 480px) {
+  
+
   .reviews-container h2 {
     font-size: 1.6rem;
   }
