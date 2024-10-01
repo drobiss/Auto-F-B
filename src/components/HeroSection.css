@@ -109,6 +109,8 @@
 @media (max-width: 768px) {
   .hero-section {
     margin: 80px auto 5vh;
+    height: 60vh;
+    min-height: 60vh;
   }
 
   .hero-text-container h1 {
