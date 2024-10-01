@@ -110,7 +110,7 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    height: 60vh;
+    height: auto;
     margin-bottom: 80px;
   }
 

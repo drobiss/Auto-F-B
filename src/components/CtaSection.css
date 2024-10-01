@@ -48,6 +48,7 @@
 
   .cta-section {
     margin: 5vh auto;
+    height: auto;
   }
 
   .cta-container h2 {

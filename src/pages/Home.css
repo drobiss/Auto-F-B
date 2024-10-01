@@ -54,7 +54,7 @@
 @media (max-width: 768px) {
   .services-container {
     margin: 5vh auto;
-    height: 100vh;
+    height: auto;
   }
 }
 

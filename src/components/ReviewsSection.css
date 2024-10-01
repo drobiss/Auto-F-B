@@ -70,6 +70,10 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
+
+  .reviews-container {
+    height: auto;
+  }
   
   .reviews-container h2 {
     font-size: 1.8rem;
