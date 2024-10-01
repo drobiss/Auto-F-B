@@ -92,8 +92,9 @@
 
 @media (max-width: 767px) {
   .hero-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 90px 0 0;
+    margin-bottom: 50px;
+   
   }
 
   .hero-text-container h1 {
@@ -107,8 +108,8 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 90px 0 0;
+    margin-bottom: 50px;
   }
 
   .hero-text-container {
