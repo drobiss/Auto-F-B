@@ -110,7 +110,8 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    margin-bottom: 50px;
+    height: 60vh;
+    margin-bottom: 80px;
   }
 
   .hero-text-container {
