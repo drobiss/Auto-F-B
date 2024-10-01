@@ -132,7 +132,7 @@
     margin-top: 100px;
     padding: 0;
     margin-bottom: 0;
-    height: 60vh;
+    min-height: 60vh;
   }
 
   .hero-text-container {
