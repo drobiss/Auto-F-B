@@ -70,11 +70,6 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-
-  .reviews-container {
-    margin-top: 100px;
-    height: 60vh;
-  }
   
   .reviews-container h2 {
     font-size: 1.8rem;
