@@ -80,15 +80,39 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 100vh; /* Ensure full viewport height on mobile */
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
   }
 
   .hero-background {
-    position: absolute; /* Change from fixed to absolute */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
   }
 
   .hero-image {
-    background-attachment: scroll; /* Prevent zoom effect on scroll */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-attachment: scroll;
+    pointer-events: none;  /* Disable touch events on the image */
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
   }
 
   .hero-content h1 {
@@ -109,4 +133,9 @@
     padding: 10px 30px;
     font-size: 0.9rem;
   }
+}
+
+/* Prevent pull-to-refresh behavior */
+body {
+  overscroll-behavior-y: contain;
 }
