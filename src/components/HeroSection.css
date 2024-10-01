@@ -34,7 +34,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero-image.fade-in {
@@ -79,6 +79,24 @@
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-background {
+    position: fixed;
+    height: 100vh;
+  }
+
+  .hero-image {
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    padding: 60px 20px;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }

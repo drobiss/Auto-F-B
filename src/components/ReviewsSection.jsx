@@ -26,7 +26,25 @@ const ReviewsSection = () => {
       name: "Petr Dvořák",
       rating: 5,
       text: "Nejlepší autoservis v okolí. Vždy se sem rád vracím pro jejich spolehlivost."
-    }
+    },
+    {
+      id: 4,
+      name: "Jan Novák",
+      rating: 5,
+      text: "Skvělý servis! Profesionální přístup a rychlé řešení problému s mým vozem."
+    },
+    {
+      id: 5,
+      name: "Jan Novák",
+      rating: 5,
+      text: "Skvělý servis! Profesionální přístup a rychlé řešení problému s mým vozem."
+    },
+    {
+      id: 6,
+      name: "Jan Novák",
+      rating: 5,
+      text: "Skvělý servis! Profesionální přístup a rychlé řešení problému s mým vozem."
+    },
   ];
 
   return (
