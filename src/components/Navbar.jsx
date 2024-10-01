@@ -42,13 +42,7 @@ const Navbar = () => {
           >
             Ceník
           </NavLink>
-
-          <NavLink
-            to="/sluzby"
-            className={({ isActive }) => (isActive ? "activeLink" : "nonactiveLink")}
-          >
-            Služby
-          </NavLink>
+          
 
           <NavLink
             to="/onas"

@@ -4,28 +4,31 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #171616; /* Změněno na tmavé pozadí */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Přidán světlý okraj */
   border-radius: 12px;
   padding: 40px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05); /* Upraveno pro tmavé pozadí */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1); /* Upraveno pro tmavé pozadí */
 }
 
 .service-card h4 {
   margin: 20px 0 15px;
   font-size: 1.5rem;
   text-align: center;
+  color: #ffffff; /* Přidáno pro lepší čitelnost na tmavém pozadí */
 }
 
 .service-card p {
   text-align: center;
   margin-bottom: 25px;
   font-size: 1rem;
+  color: #cccccc; /* Změněno pro lepší čitelnost na tmavém pozadí */
 }
 
 .service-btn {
@@ -46,8 +49,7 @@
   box-shadow: 0 4px 15px rgba(160, 10, 24, 0.3);
 }
 
-
-.svg-inline--fa{
+.svg-inline--fa {
   font-size: 3rem;
   color: #a00a18;
   margin-bottom: 15px;

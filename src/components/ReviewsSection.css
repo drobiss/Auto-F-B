@@ -1,0 +1,90 @@
+.reviews-container {
+  height: 40vh;
+  max-width: 1200px;
+  margin: 10vh auto;
+  padding: 0;
+}
+
+.reviews-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reviews-container h2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.review-card {
+  background-color: #171616; /* Tmavé pozadí, stejné jako hlavní pozadí webu */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Světlý okraj */
+  border-radius: 10px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  color: #ffd700; /* Žlutá barva pro hvězdy */
+  font-size: 0.9rem; /* Menší velikost hvězd */
+  margin-left: 2px;
+}
+
+.review-card p {
+  color: #cccccc; /* Světle šedý text pro lepší čitelnost */
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .reviews-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .review-card {
+    padding: 15px;
+  }
+}

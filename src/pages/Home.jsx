@@ -4,6 +4,7 @@ import HeroSection from "../components/HeroSection"
 import ServiceCard from "../components/ServiceCard"
 import useScrollEffect from "../hooks/useScrollEffect"
 import CtaSection from "../components/CtaSection"
+import ReviewsSection from "../components/ReviewsSection"
 
 // Styles import
 import "../pages/Home.css"
@@ -59,6 +60,8 @@ const Home = () => {
           />
         </div>
       </section>
+
+      <ReviewsSection/>
 
       <CtaSection/>
     </div>

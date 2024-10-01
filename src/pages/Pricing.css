@@ -16,6 +16,7 @@ h1 {
 p {
   font-size: 1.1rem;
   margin-bottom: 40px;
+  
 }
 
 .services-section {
@@ -29,18 +30,25 @@ h2 {
 }
 
 .pricing-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
   width: 100%;
   border-collapse: collapse;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #171616;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pricing-table th,
 .pricing-table td {
   padding: 20px;
   text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cccccc;
+  
 }
 
 .pricing-table tr:last-child td {
@@ -50,6 +58,7 @@ h2 {
 .pricing-table th {
   font-size: 1.2rem;
   font-weight: bold;
+  
 }
 
 

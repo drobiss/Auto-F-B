@@ -2,6 +2,7 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 80px;
   padding: 5% 5%;
   display: flex;
   flex-direction: column;
@@ -27,6 +28,7 @@
 .hero-text-container p {
   font-size: 1.1rem;
   margin: 0;
+  color: #cccccc;
 }
 
 .hero-cta {
@@ -87,12 +89,12 @@
 
   .hero-img-container {
     max-width: 50%;
+    height: 60vh;
   }
 }
 
 @media (max-width: 767px) {
   .hero-section {
-    padding: 90px 0 0;
     margin-bottom: 50px;
    
   }
@@ -108,7 +110,7 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 90px 0 0;
+    height: 60vh;
     margin-bottom: 50px;
   }
 

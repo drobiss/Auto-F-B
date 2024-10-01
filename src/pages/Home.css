@@ -7,6 +7,7 @@
 /* Services section */
 .services-container {
   max-width: 1200px;
+  height: 80vh;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -15,6 +16,7 @@
 }
 
 .services-container h2 {
+  margin-bottom: 40px;
   text-align: center;
   font-size: 2rem;
   opacity: 0;
