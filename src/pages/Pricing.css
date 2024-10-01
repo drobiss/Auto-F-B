@@ -4,7 +4,7 @@
   line-height: 1.6;
   max-width: 1200px;
   margin: 120px auto;
-  padding: 0;
+  padding: 0 10px;
 }
 
 h1 {
@@ -16,7 +16,6 @@ h1 {
 p {
   font-size: 1.1rem;
   margin-bottom: 40px;
-  
 }
 
 .services-section {
@@ -29,17 +28,17 @@ h2 {
   text-align: center;
 }
 
-.pricing-table {
-  border-collapse: separate;
-  border-spacing: 0;
+.pricing-table-container {
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+.pricing-table {
   width: 100%;
   border-collapse: collapse;
   background-color: #171616;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pricing-table th,
@@ -48,7 +47,6 @@ h2 {
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   color: #cccccc;
-  
 }
 
 .pricing-table tr:last-child td {
@@ -58,9 +56,8 @@ h2 {
 .pricing-table th {
   font-size: 1.2rem;
   font-weight: bold;
-  
+  color: #ffffff;
 }
-
 
 @media (max-width: 768px) {
   h1, .cta-section h2 {
@@ -78,7 +75,6 @@ h2 {
 }
 
 @media (max-width: 480px) {
-
   .pricing-container {
     margin-top: 100px;
     margin-bottom: 0;
