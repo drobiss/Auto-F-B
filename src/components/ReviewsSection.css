@@ -1,8 +1,9 @@
 .reviews-container {
-  height: 40vh;
+  
   max-width: 1200px;
-  margin: 10vh auto;
-  padding: 0;
+  margin: auto;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
 }
 
 .reviews-container h2 {
@@ -26,8 +27,8 @@
 }
 
 .review-card {
-  background-color: #171616; /* Tmavé pozadí, stejné jako hlavní pozadí webu */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Světlý okraj */
+  background-color: #171616;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -57,18 +58,18 @@
 }
 
 .star-icon {
-  color: #ffd700; /* Žlutá barva pro hvězdy */
-  font-size: 0.9rem; /* Menší velikost hvězd */
+  color: #ffd700;
+  font-size: 0.9rem;
   margin-left: 2px;
 }
 
 .review-card p {
-  color: #cccccc; /* Světle šedý text pro lepší čitelnost */
+  color: #cccccc;
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
 
   .reviews-container {

@@ -1,7 +1,4 @@
 import "./Footer.css"
-import React from 'react';
-
-
 const Footer = () => {
   return (
     <footer className="footer">
@@ -22,7 +19,7 @@ const Footer = () => {
         <p>&copy; 2024 Auto F&B. Všechna práva vyhrazena.</p>
       </div>
     </footer>
-  );
-};
+  )
+}
 
 export default Footer

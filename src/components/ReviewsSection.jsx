@@ -1,12 +1,11 @@
-import React, { useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import useScrollEffect from "../hooks/useScrollEffect";
-import './ReviewsSection.css';
-
+import { useRef } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import useScrollEffect from "../hooks/useScrollEffect"
+import './ReviewsSection.css'
 const ReviewsSection = () => {
-  const reviewsHeadingRef = useRef(null);
-  const isVisible = useScrollEffect(reviewsHeadingRef);
+  const reviewsHeadingRef = useRef(null)
+  const isVisible = useScrollEffect(reviewsHeadingRef)
 
   const reviews = [
     {
@@ -45,7 +44,7 @@ const ReviewsSection = () => {
       rating: 5,
       text: "Skvělý servis! Profesionální přístup a rychlé řešení problému s mým vozem."
     },
-  ];
+  ]
 
   return (
     <section className="reviews-container">
@@ -68,7 +67,7 @@ const ReviewsSection = () => {
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ReviewsSection;
+export default ReviewsSection

@@ -1,4 +1,3 @@
-import React from 'react';
 import CtaSection from "../components/CtaSection"
 import "./Pricing.css"
 
@@ -32,7 +31,7 @@ const PricingPage = () => {
 
   return (
     <div className="pricing-container">
-      <h1>Ceník služeb</h1>
+      <h1 className='pricing-heading'>Ceník služeb</h1>
       <p>Podívejte se na náš aktuální ceník a zjistěte, jak můžeme pomoci s údržbou a opravami vašeho vozu.</p>
 
       <section className="services-section">
@@ -60,4 +59,4 @@ const PricingPage = () => {
   );
 };
 
-export default PricingPage;
+export default PricingPage

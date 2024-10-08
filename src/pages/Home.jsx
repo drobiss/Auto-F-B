@@ -8,11 +8,10 @@ import ReviewsSection from "../components/ReviewsSection"
 
 // Styles import
 import "../pages/Home.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGears, faToolbox } from '@fortawesome/free-solid-svg-icons'
 
 //Images import
-import dilnaImage from "../images/dilna.jpg"
+import dilnaImage from "../images/dilna2.png"
 import dilnaVenkuImage from "../images/dilna-venku.jpg"
 import klimaImage from "../images/cisteni-klimatizace.jpg"
 
@@ -46,17 +45,19 @@ const Home = () => {
         </h2>
 
         <div className="services-cards-container">
-          <ServiceCard
-            icon={faGears}
-            title="Mechanické práce"
-            description="Zajišťujeme kompletní mechanické práce, od výměn olejů a filtrů až po opravy brzd, spojek, náprav a motorů. Postaráme se o váš vůz se zaměřením na detail, aby byl vždy v perfektním stavu."
-            buttonText="Více o mechanických pracích"
-          />
+        <ServiceCard
+          icon={faGears}
+          title="Mechanické práce"
+          description="Zajišťujeme kompletní mechanické práce..."
+          buttonText="Více o cenách mechanických prací"
+          buttonLink="/cenik"
+        />
           <ServiceCard
             icon={faToolbox}
             title="Další služby"
-            description="Nabízíme širokou škálu dalších služeb včetně údržby a oprav autoklimatizací, dezinfekce vozidel ozonem, profesionální diagnostiky pro většinu vozidel a leštění světlometů. Vaše vozidlo u nás dostane prvotřídní péči."
-            buttonText="Více o dalších služách"
+            description="Nabízíme širokou škálu dalších služeb..."
+            buttonText="Více o cenách dalších služeb"
+            buttonLink="/cenik"
           />
         </div>
       </section>

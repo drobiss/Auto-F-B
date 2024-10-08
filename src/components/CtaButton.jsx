@@ -1,9 +1,10 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 import "../components/CtaButton.css"
+import { Link } from "react-router-dom"
 
-const CtaButton = () => {
+const CtaButton = ({ buttonText, buttonLink }) => {
   return <>
-    <button className='cta-btn'>Kontakt</button>
+    <Link to={buttonLink} className="cta-btn">{buttonText}</Link>
   </>
 }
 

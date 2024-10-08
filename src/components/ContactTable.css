@@ -1,0 +1,87 @@
+.contact-table-container {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  margin: 10vh 0;
+  padding: 0;
+}
+
+.contact-table-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #171616;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+.contact-table td {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cccccc;
+}
+
+.contact-table tr:last-child td {
+  border-bottom: none;
+}
+
+.contact-table td:first-child {
+  width: 60px;
+}
+
+.contact-icon {
+  font-size: 24px;
+  color: #a00a18;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.contact-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.contact-table tr:hover .contact-icon {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contact-table-container h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-table td {
+    padding: 15px 10px;
+  }
+  
+  .contact-icon {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-table-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-table td {
+    font-size: 0.9rem;
+    padding: 12px 8px;
+  }
+}
