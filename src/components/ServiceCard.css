@@ -68,10 +68,6 @@
   .service-card p {
     font-size: 0.9rem;
   }
-
-  .service-card {
-    padding: 30px;
-  }
 }
 
 @media (max-width: 480px) {

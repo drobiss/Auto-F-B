@@ -22,7 +22,15 @@ const AboutUs = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        }
+      }
+    ]
   }
 
   return (
