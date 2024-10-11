@@ -43,6 +43,10 @@
 
 @media (max-width: 768px) {
 
+  .cta-container {
+    padding: 15px;
+  }
+
   .cta-container p {
     font-size: 0.9rem;
   }
